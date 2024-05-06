@@ -16,8 +16,8 @@ using namespace std;
     return input;
 }
  
-auto main(int argc, char** argv) -> int 
-{
+auto main(int argc, char** argv) -> int {
+
         string ProjectName; //To get the user's Project Title
         std::cout << "Project Title: ";
         getline(std::cin, ProjectName); // The user inputs the project title
