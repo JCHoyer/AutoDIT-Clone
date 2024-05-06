@@ -48,9 +48,10 @@ auto main(int argc, char** argv) -> int
             if (! std::filesystem::exists(FileName)) {
 
                 std::cout << "File does not exist.\n";
+                continue;
 
        }
-            std::filesystem::copy(FileName, std::filesystem::path(Path) / ProjectName / "Captured Video");
+            std::filesystem::copy(FileName, std::filesystem::path(Path) / ProjectName / "Captured Video", std::filesystem::copy_options::update_existing);
       }
        
 }
