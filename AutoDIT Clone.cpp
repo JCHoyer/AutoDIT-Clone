@@ -7,6 +7,9 @@
 using namespace std;
 
  auto strip_quotes(std::string input) -> std::string {
+     if (input.empty()) {
+         return input;
+     }
     if (input.starts_with('"') && input.ends_with('"') ) {
         return {input.begin() + 1, input.end() - 1 };
     }
@@ -39,8 +42,8 @@ auto main(int argc, char** argv) -> int
        while (true)
        {
            std::string FileName;
-           FileName = strip_quotes(FileName);
            getline(std::cin, FileName);
+           FileName = strip_quotes(FileName);
 
            if (FileName.empty()) {
                break;
