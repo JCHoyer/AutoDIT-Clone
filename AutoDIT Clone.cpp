@@ -39,8 +39,8 @@ auto main(int argc, char** argv) -> int
        while (true)
        {
            std::string FileName;
-           FileName = strip_quotes(FileName);
            getline(std::cin, FileName);
+           FileName = strip_quotes(FileName);
 
            if (FileName.empty()) {
                break;
